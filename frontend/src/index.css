@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* ── 暗色主题（默认）─────────────────────── */
+:root {
+  --bg-base:      #13151e;
+  --bg-card:      #1c1f2e;
+  --bg-input:     #13151e;
+  --bg-hover:     rgba(255,255,255,0.07);
+  --bg-active:    rgba(99,102,241,0.2);
+  --border:       rgba(255,255,255,0.15);
+  --text-primary: #f1f5f9;
+  --text-secondary: #b0bcd4;
+  --text-muted:   #7a8ba3;
+  --text-accent:  #a5b4fc;
+  --accent:       #4f46e5;
+  --accent-hover: #4338ca;
+  --shadow:       0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* ── 亮色主题 ────────────────────────────── */
+.light {
+  --bg-base:      #f8fafc;
+  --bg-card:      #ffffff;
+  --bg-input:     #f1f5f9;
+  --bg-hover:     rgba(0,0,0,0.04);
+  --bg-active:    rgba(99,102,241,0.08);
+  --border:       rgba(0,0,0,0.1);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted:   #94a3b8;
+  --text-accent:  #4f46e5;
+  --accent:       #4f46e5;
+  --accent-hover: #4338ca;
+  --shadow:       0 25px 50px rgba(0,0,0,0.1);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+#root { min-height: 100vh; }
+
+/* ── 通用组件样式 ────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.input-base {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input-base:focus {
+  border-color: var(--accent);
+}
+
+.input-base::placeholder {
+  color: var(--text-muted);
+}
+
+select.input-base option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
