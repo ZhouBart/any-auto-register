@@ -109,6 +109,7 @@ app.include_router(config_router, prefix="/api")
 app.include_router(actions_router, prefix="/api")
 app.include_router(integrations_router, prefix="/api")
 app.include_router(auth_router, prefix="/api")
+app.include_router(email_services_router, prefix="/api")
 
 
 @app.get("/api/solver/status")
