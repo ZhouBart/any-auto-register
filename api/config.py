@@ -75,6 +75,12 @@ CONFIG_KEYS = [
     "grok2api_quota",
     "kiro_manager_path",
     "kiro_manager_exe",
+    "cloud_mail_base_url",
+    "cloud_mail_admin_email",
+    "cloud_mail_admin_password",
+    "cloud_mail_domain",
+    "cloud_mail_subdomain",
+    "cloud_mail_timeout",
 ]
 
 
